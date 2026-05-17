@@ -1,5 +1,7 @@
 # svelte2react
 
+Use Svelte components in React.
+
 ## Install
 
 ```bash
