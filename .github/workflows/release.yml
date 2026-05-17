@@ -34,4 +34,4 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: pnpm release
+          publish: pnpm ci:publish
