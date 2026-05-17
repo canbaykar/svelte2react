@@ -4,9 +4,14 @@
   "description": "Use Svelte components in React.",
   "private": false,
   "keywords": [
-    "rollup",
-    "plugin",
-    "rollup-plugin"
+    "svelte",
+    "svelte5",
+    "react",
+    "svelte-component",
+    "react-component",
+    "svelte-to-react",
+    "cross-framework",
+    "svelte2react"
   ],
   "license": "0BSD",
   "author": "Togan Can Baykar",
