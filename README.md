@@ -36,8 +36,18 @@ export default function App() {
   const [name, setName] = useState('Mark');
 
   return <>
+    <label>
+      Your name:
+      <input
+        value={name}
+        onChange={e => setName(e.target.value)}
+      />
+    </label>
+
     My Svelte component:
     <SvelteButton name={name} />
   </>;
 }
 ```
+
+Now `SvelteButton` will react to changes to `name` (without re-initializing everytime `name` changes).
