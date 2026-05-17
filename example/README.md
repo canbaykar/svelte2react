@@ -13,14 +13,14 @@ To get this example working on your computer:
     # Enter into the repo directory
     cd svelte2react
     # Install the dependencies for svelte2react
-    npm i
+    pnpm i
     # Build svelte2react
-    npm run build
+    pnpm build
     # Enter into the example directory
     cd example
     # Install the dependencies for the example application
-    npm i
+    pnpm i
     # Finally, run the example application
-    npm run dev:open
+    pnpm dev:open
     # You can stop the Vite server with Ctrl+C
     ```
