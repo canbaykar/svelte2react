@@ -35,8 +35,14 @@
     }
   },
   "engines": {
-    "node": ">=24",
-    "pnpm": ">=11"
+    "node": ">=24"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": ">=11",
+      "onFail": "error"
+    }
   },
   "devDependencies": {
     "@changesets/cli": "^2.31.0",
