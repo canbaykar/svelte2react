@@ -1,8 +1,11 @@
 # svelte2react Example
 
 To get this example working on your computer:
+
 1. Make sure [Node.js](https://nodejs.org/) is installed on your computer.
+
 2. Open your terminal and navigate to an available folder.
+
 3. Run:
     ```bash
     # Clone this repo
