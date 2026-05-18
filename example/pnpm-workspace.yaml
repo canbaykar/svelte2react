@@ -1,3 +1,0 @@
-allowBuilds:
-  '@baykar/svelte2react': true
-  esbuild: true
