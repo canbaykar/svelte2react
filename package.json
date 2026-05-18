@@ -18,7 +18,7 @@
   "type": "module",
   "scripts": {
     "build": "svelte-package -i ./src -o ./dist",
-    "ci:publish": "pnpm publish -r",
+    "ci:publish": "pnpm publish -r --no-git-checks",
     "preinstall": "npx only-allow pnpm"
   },
   "files": [
