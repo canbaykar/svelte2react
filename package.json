@@ -1,6 +1,6 @@
 {
   "name": "@baykar/svelte2react",
-  "version": "0.0.0-development",
+  "version": "0.0.0",
   "description": "Use Svelte components in React.",
   "private": false,
   "keywords": [
