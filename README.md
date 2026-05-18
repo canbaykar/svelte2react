@@ -56,7 +56,7 @@ Now the rendered `SvelteButton` will react to changes to `name` (without re-init
 
 ## Prop Reactivity Breakdown
 
-The Svelte component given to `Wrap` is wrapped in a Svelte component (defined in [Wrapper.svelte](src/Wrapper.svelte)) and a React component (defined in [index.ts](src/index.ts)). These two communicate via a [Svelte store](https://svelte.dev/docs/svelte/stores) `pStore` that stores your components props.
+The Svelte component given to `Wrap` is wrapped in a Svelte component (defined in [Wrapper.svelte](src/Wrapper.svelte)) and a React component (defined in [index.ts](src/index.ts)). These two communicate via a [Svelte store](https://svelte.dev/docs/svelte/stores) `pStoreRef.current` that stores your components props.
 
 In the example above, once `setName` is called:
 
@@ -64,11 +64,11 @@ In the example above, once `setName` is called:
 
 2. `WrappedSvelteButton` is re-rendered because its parent (`App`) re-rendered
 
-3. `pStore.set(p)` is called in [index.ts](src/index.ts). `pStore` is a [Svelte store](https://svelte.dev/docs/svelte/stores) that stores the props for `SvelteButton`.
+3. `pStoreRef.current.set(p)` is called in [index.ts](src/index.ts). `pStoreRef.current` is a [Svelte store](https://svelte.dev/docs/svelte/stores) that stores the props for `SvelteButton`.
 
-4. `pStore` calles its only subscriber, which is an instance of the Svelte component `Wrapper`, defined in [Wrapper.svelte](src/Wrapper.svelte).
+4. `pStoreRef.current` calles its only subscriber, which is an instance of the Svelte component `Wrapper`, defined in [Wrapper.svelte](src/Wrapper.svelte).
 
-5. `Wrapper` updates the props passed to your component due to `{...$pState}` in [Wrapper.svelte](src/Wrapper.svelte). (`$pState` is why `Wrapper` automatically subscribes to `pStore` previously.)
+5. `Wrapper` updates the props passed to your component due to `{...$pState}` in [Wrapper.svelte](src/Wrapper.svelte). (`$pState` is why `Wrapper` automatically subscribes to `pStoreRef.current` previously.)
 
 ## Caveats
 

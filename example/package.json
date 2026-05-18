@@ -15,6 +15,7 @@
     "react-dom": "^16.8.0"
   },
   "devDependencies": {
+    "@baykar/svelte2react": "file:..",
     "@sveltejs/vite-plugin-svelte": "^6.2.4",
     "@types/node": "^24.12.3",
     "@types/react": "^16.8.0",
@@ -22,7 +23,6 @@
     "@vitejs/plugin-react": "^5.2.0",
     "globals": "^17.6.0",
     "typescript": "~6.0.2",
-    "vite": "7.3",
-    "@baykar/svelte2react": "file:.."
+    "vite": "7.3"
   }
 }
