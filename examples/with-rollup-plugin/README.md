@@ -1,4 +1,4 @@
-# svelte2react Example
+# rollup-plugin-svelte2react Example
 
 To get this example working on your computer:
 
