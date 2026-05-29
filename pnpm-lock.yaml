@@ -21,7 +21,7 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3
 
-  examples/with-rollup:
+  examples/with-rollup-plugin:
     dependencies:
       react:
         specifier: ^16.8.0
@@ -73,7 +73,7 @@ importers:
         specifier: ^11.3.3
         version: 11.3.3(vite@7.3.3(@types/node@24.12.4)(jiti@2.7.0)(lightningcss@1.32.0))
 
-  examples/without-rollup:
+  examples/without-rollup-plugin:
     dependencies:
       react:
         specifier: ^16.8.0
