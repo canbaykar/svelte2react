@@ -1,6 +1,7 @@
 import path from "node:path";
 import fs from "node:fs";
 import type { Plugin, PluginContext } from "rollup";
+import { id2componentName, removeQueries } from "utils";
 
 const PLUGIN_NAME = "svelte2react";
 const PLUGIN_FULL_NAME = "rollup-plugin-" + PLUGIN_NAME;
@@ -48,32 +49,31 @@ export default function svelte2react({
 		transform(code, id) {
 			const ctx = this;
 
-			const id_ = removeQueries(id);
-			const ext_ = path.extname(id_);
-			if (ext_ !== '.svelte') return null;
+			const ext = path.extname(removeQueries(id));
+			if (ext !== '.svelte') return null;
 
-			const svelteExportName = getDefaultExport(ctx, code);
-			const reactExportName = transformName(svelteExportName);
+			// svelteComponentName has to match the default export in code but,
+			// wrappedComponentName has to match svetle2react's TypeScript plugin's
+			// export. 1st is determined by Svelte compiler, while 2nd is determined
+			// by id2componentName which is more similar to Svelte TS plugin's method.
+			// So these can be very different even ignoring transformName's change. 
+			const svelteComponentName = getDefaultExport(ctx, code);
+			const wrappedComponentName = transformName(id2componentName(id));
 
 			return {
 				code: code + '\n' + `
 import { Wrap } from "${DEPENDENCY}";
-export const ${reactExportName} = Wrap(${svelteExportName});`,
+export const ${wrappedComponentName} = Wrap(${svelteComponentName});`,
 				map: null,
 			};
 		},
 	};
 }
 
-/** Removes queries like ?inline from id */
-function removeQueries(id: string) {
-	const ext = path.extname(id);
-	return path.basename(id, ext.match(/(?:\?.*)?$/)?.[0]);
-}
-
 /** Looks for default export variable name */
 function getDefaultExport(ctx: PluginContext, code: string) {
-	const exp = code.match(/export default ([_$a-zA-Z][_$a-zA-Z0-9]*);/)?.[1];
-	if (!exp) ctx.error("Couldn't parse default export name.\nCode:\n" + code);
+	let exp = code.match(/export default ([_$a-zA-Z][_$a-zA-Z0-9]*);/)?.[1];
+	if (!exp) exp = code.match(/export default function ([_$a-zA-Z][_$a-zA-Z0-9]*)\(/)?.[1];
+	if (!exp) ctx.error("Couldn't parse default export name. Code:\n" + code);
 	return exp;
 }
