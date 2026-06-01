@@ -46,7 +46,7 @@ export default function svelte2react({ skipDependencyCheck = false }: PluginOpti
 				if (pkgRead) this.error(e as string);
 				else
 					this.error(
-						`Could not read package.json at ${pkgPath}. Make sure you have "${DEPENDENCY}" installed, and if necessary, skip this check by setting skipDependencyCheck to true in ${PLUGIN_FULL_NAME} options. Error details: ${(e as string)?.message}`
+						`Could not read package.json at ${pkgPath}. Make sure you have "${DEPENDENCY}" installed, and if necessary, skip this check by setting skipDependencyCheck to true in ${PLUGIN_FULL_NAME} options. Error details: ${(e as { message: string })?.message}`
 					);
 			}
 		},
