@@ -1,0 +1,47 @@
+{
+	"name": "@baykar/typescript-plugin-svelte2react",
+	"version": "0.0.0",
+	"description": "Typescript plugin used together with rollup-plugin-svelte2react.",
+	"private": false,
+	"keywords": [
+		"typescript",
+		"typescript-plugin",
+		"svelte",
+		"svelte5",
+		"react",
+		"cross-framework",
+		"svelte-to-react",
+		"svelte2react"
+	],
+	"license": "0BSD",
+	"author": "Togan Can Baykar",
+	"type": "commonjs",
+	"scripts": {
+		"build": "tsc",
+		"watch": "tsc --watch"
+	},
+	"files": [
+		"dist",
+		"README.md"
+	],
+	"types": "./dist/index.d.ts",
+	"main": "./dist/index.js",
+	"engines": {
+		"node": ">=24"
+	},
+	"devEngines": {
+		"packageManager": {
+			"name": "pnpm",
+			"version": ">=11",
+			"onFail": "error"
+		}
+	},
+	"devDependencies": {
+		"typescript": "^6.0.3",
+        "utils": "workspace:~"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/canbaykar/svelte2react.git"
+	}
+}
