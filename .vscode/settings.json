@@ -1,0 +1,7 @@
+{
+	"editor.formatOnSave": true,
+	"prettier.configPath": "config/.prettierrc",
+	"eslint.options": {
+		"overrideConfigFile": "./config/eslint.config.js"
+	}
+}

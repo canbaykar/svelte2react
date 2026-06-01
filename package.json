@@ -1,17 +1,20 @@
 {
-    "name": "svelte2react-monorepo",
-    "private": true,
-    "license": "0BSD",
-    "type": "module",
-    "scripts": {
-        "build": "pnpm -r --filter=./packages/* build",
-        "changeset": "changeset",
-        "ci:publish": "changeset publish"
-    },
-    "devDependencies": {
-        "@changesets/cli": "^2.31.0",
-        "@types/node": "^25.6.2",
-        "@types/react": "^16.8.0",
-        "typescript": "^6.0.3"
-    }
+	"name": "svelte2react-monorepo",
+	"private": true,
+	"license": "0BSD",
+	"type": "module",
+	"scripts": {
+		"build": "pnpm -r --filter=./packages/* build",
+		"changeset": "changeset",
+		"ci:publish": "changeset publish"
+	},
+	"devDependencies": {
+		"@changesets/cli": "^2.31.0",
+		"@types/node": "^25.6.2",
+		"@types/react": "^16.8.0",
+		"prettier": "^3.8.3",
+		"prettier-plugin-svelte": "^4.0.1",
+		"typescript": "^6.0.3",
+		"vitest": "^4.1.7"
+	}
 }

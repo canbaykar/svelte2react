@@ -1,0 +1,31 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`rollup > basic.svelte 1`] = `
+"// basic.js
+import 'svelte/internal/disclose-version';
+import * as $ from 'svelte/internal/client';
+import { Wrap } from '@baykar/svelte2react';
+
+var root = $.from_html(\`<button> </button>\`);
+
+function Basic($$anchor, $$props) {
+	let name = $.prop($$props, 'name', 3, '');
+	let count = $.state(0);
+
+	console.log('Svelte component initialized');
+
+	var button = root();
+	var text = $.child(button);
+
+	$.reset(button);
+	$.template_effect(() => $.set_text(text, \`Hi \${name() ?? ''}! You clicked me \${$.get(count) ?? ''} times!\`));
+	$.delegated('click', button, () => $.update(count));
+	$.append($$anchor, button);
+}
+
+$.delegate(['click']);
+const BasicX = Wrap(Basic);
+
+export { BasicX, Basic as default };
+"
+`;

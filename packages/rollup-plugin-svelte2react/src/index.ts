@@ -1,7 +1,7 @@
 import path from "node:path";
 import fs from "node:fs";
 import type { Plugin, PluginContext } from "rollup";
-import { id2componentName, removeQueries } from "utils";
+import { id2componentName } from "utils";
 
 const PLUGIN_NAME = "svelte2react";
 const PLUGIN_FULL_NAME = "rollup-plugin-" + PLUGIN_NAME;
@@ -42,14 +42,14 @@ export default function svelte2react({
 				}
 			} catch (e) {
 				if (pkgRead) ctx.error(e as any);
-				ctx.error(`Could not read package.json at ${pkgPath}. Make sure you have "${DEPENDENCY}" installed, and if necessary, skip this check by setting skipDependencyCheck to true in ${PLUGIN_FULL_NAME} options. Error details: ${(e as any)?.message}`);
+				else ctx.error(`Could not read package.json at ${pkgPath}. Make sure you have "${DEPENDENCY}" installed, and if necessary, skip this check by setting skipDependencyCheck to true in ${PLUGIN_FULL_NAME} options. Error details: ${(e as any)?.message}`);
 			}
 		},
 
 		transform(code, id) {
 			const ctx = this;
 
-			const ext = path.extname(removeQueries(id));
+			const ext = path.extname(id);
 			if (ext !== '.svelte') return null;
 
 			// svelteComponentName has to match the default export in code but,
