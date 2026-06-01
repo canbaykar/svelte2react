@@ -15,13 +15,13 @@ Given an example Svelte component such as;
 ```svelte
 <!-- SvelteButton.svelte -->
 <script lang="ts">
-    let { name = '' } = $props();
-    let count = $state(0);
-    console.log('Svelte component initialized');
+	let { name = '' } = $props();
+	let count = $state(0);
+	console.log('Svelte component initialized');
 </script>
 
 <button onclick={() => count++}>
-    Hi {name}! You clicked me {count} times!
+	Hi {name}! You clicked me {count} times!
 </button>
 ```
 
@@ -35,20 +35,18 @@ import SvelteButton from './SvelteButton.svelte';
 const WrappedSvelteButton = Wrap(SvelteButton);
 
 export default function App() {
-  const [name, setName] = useState('Mark');
+	const [name, setName] = useState('Mark');
 
-  return <>
-    <label>
-      Your name:
-      <input
-        value={name}
-        onChange={e => setName(e.target.value)}
-      />
-    </label>
-
-    My Svelte component:
-    <WrappedSvelteButton name={name} />
-  </>;
+	return (
+		<>
+			<label>
+				Your name:
+				<input value={name} onChange={(e) => setName(e.target.value)} />
+			</label>
+			My Svelte component:
+			<WrappedSvelteButton name={name} />
+		</>
+	);
 }
 ```
 
@@ -75,15 +73,16 @@ In the example above, once `setName` is called:
 Some Svelte and React features obviously won't make sense or won't work. To name some:
 
 - ❌ Children
-  ```jsx
-  <WrappedSvelteComponent>
-    <SvelteOrReactComponent />
-  </WrappedSvelteComponent>
-  ```
+
+    ```jsx
+    <WrappedSvelteComponent>
+    	<SvelteOrReactComponent />
+    </WrappedSvelteComponent>
+    ```
 
 - ❌ Svelte bindings
-  ```svelte
-  <script lang="ts">
-    let { value = $bindable(), ...props } = $props();
-  </script>
-  ```
+    ```svelte
+    <script lang="ts">
+    	let { value = $bindable(), ...props } = $props();
+    </script>
+    ```

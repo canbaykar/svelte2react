@@ -4,7 +4,7 @@
  * @module
  */
 
-import { svelte2react } from './index'
+import { svelte2react } from './index';
 
 /**
  * Vite plugin
@@ -19,6 +19,6 @@ import { svelte2react } from './index'
  * })
  * ```
  */
-const vite = svelte2react.vite as typeof svelte2react.vite
-export default vite
-export { vite as 'module.exports' }
+const vite = svelte2react.vite as typeof svelte2react.vite;
+export default vite;
+export { vite as 'module.exports' };

@@ -1,5 +1,5 @@
 {
-    "extends": "../../tsconfig.json",
+	"extends": "../../tsconfig.json",
 	"compilerOptions": {
 		"module": "commonjs",
 		"noUnusedLocals": false,
@@ -9,5 +9,5 @@
 		"outDir": "./dist",
 		"noEmit": false
 	},
-    "include": ["src"]
+	"include": ["src"]
 }

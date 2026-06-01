@@ -1,67 +1,67 @@
 {
-    "name": "@baykar/rollup-plugin-svelte2react",
-    "version": "0.0.0-development",
-    "description": "Automatically turn Svelte components to React components.",
-    "private": true,
-    "keywords": [
-        "rollup",
-        "rollup-plugin",
-        "vite",
-        "vite-plugin",
-        "svelte",
-        "svelte5",
-        "react",
-        "cross-framework",
-        "svelte-component",
-        "react-component",
-        "svelte-to-react",
-        "svelte2react"
-    ],
-    "license": "0BSD",
-    "author": "Togan Can Baykar",
-    "type": "module",
-    "files": [
-        "dist",
-        "README.md"
-    ],
-    "types": "./dist/index.d.ts",
-    "main": "./dist/index.js",
-    "module": "./dist/index.js",
-    "scripts": {
-        "build": "vite build"
-    },
-    "exports": {
-        ".": {
-            "import": "./dist/index.js",
-            "svelte": "./dist/index.js"
-        }
-    },
-    "engines": {
-        "node": ">=24"
-    },
-    "devEngines": {
-        "packageManager": {
-            "name": "pnpm",
-            "version": ">=11",
-            "onFail": "error"
-        }
-    },
-    "dependencies": {
-        "@baykar/svelte2react": "workspace:~",
-        "utils": "workspace:~"
-    },
-    "peerDependencies": {
-        "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
-        "rollup": "^4.60.4",
-        "svelte": "^5.0.0"
-    },
-    "devDependencies": {
-        "path": "^0.12.7",
-        "vite": "^8.0.13",
-        "vite-plugin-dts": "^5.0.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/canbaykar/svelte2react.git"
-    }
+	"name": "@baykar/rollup-plugin-svelte2react",
+	"version": "0.0.0-development",
+	"description": "Automatically turn Svelte components to React components.",
+	"private": true,
+	"keywords": [
+		"rollup",
+		"rollup-plugin",
+		"vite",
+		"vite-plugin",
+		"svelte",
+		"svelte5",
+		"react",
+		"cross-framework",
+		"svelte-component",
+		"react-component",
+		"svelte-to-react",
+		"svelte2react"
+	],
+	"license": "0BSD",
+	"author": "Togan Can Baykar",
+	"type": "module",
+	"files": [
+		"dist",
+		"README.md"
+	],
+	"types": "./dist/index.d.ts",
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"scripts": {
+		"build": "vite build"
+	},
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"svelte": "./dist/index.js"
+		}
+	},
+	"engines": {
+		"node": ">=24"
+	},
+	"devEngines": {
+		"packageManager": {
+			"name": "pnpm",
+			"version": ">=11",
+			"onFail": "error"
+		}
+	},
+	"dependencies": {
+		"@baykar/svelte2react": "workspace:~",
+		"utils": "workspace:~"
+	},
+	"peerDependencies": {
+		"react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+		"rollup": "^4.60.4",
+		"svelte": "^5.0.0"
+	},
+	"devDependencies": {
+		"path": "^0.12.7",
+		"vite": "^8.0.13",
+		"vite-plugin-dts": "^5.0.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/canbaykar/svelte2react.git"
+	}
 }

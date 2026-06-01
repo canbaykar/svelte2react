@@ -1,5 +1,5 @@
-import path from "node:path";
-import { pascalCase } from "scule";
+import path from 'node:path';
+import { pascalCase } from 'scule';
 
 // Copied (modified) from classNameFromFilename in:
 // https://github.com/sveltejs/language-tools/blob/6bd8b175ad5918b5822e4323a4e67d79918eff84/packages/svelte2tsx/src/svelte2tsx/addComponentExport.ts#L1
@@ -27,10 +27,11 @@ export function id2componentName(filename: string) {
 		// BEHAVIOR CHANGING MODIFICATION: Changed substr to substring. Different with argument -1:
 		// '123'.substr(-1) is '3' but '123'.substring(-1) is '123'.
 		// Latter is probably the original intention and probably will change in the future.
-		const withoutLeadingInvalidCharacters = withoutInvalidCharacters.substring(firstValidCharIdx);
+		const withoutLeadingInvalidCharacters =
+			withoutInvalidCharacters.substring(firstValidCharIdx);
 		const inPascalCase = pascalCase(withoutLeadingInvalidCharacters);
 		return firstValidCharIdx === -1 ? `A${inPascalCase}` : inPascalCase;
-	} catch (error) {
+	} catch {
 		console.warn(`Failed to create a name for the component class from filename ${filename}`);
 		// BEHAVIOR CHANGING MODIFICATION: Returns 'Component' instead of undefined
 		return 'Component';

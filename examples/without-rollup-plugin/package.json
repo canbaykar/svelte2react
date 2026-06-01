@@ -1,29 +1,29 @@
 {
-  "name": "vite-example",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "dev:open": "vite --open",
-    "build": "tsc -b && vite build",
-    "preview": "vite preview",
-    "preinstall": "npx only-allow pnpm"
-  },
-  "dependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0",
-    "svelte": "^5.55.7"
-  },
-  "devDependencies": {
-    "@baykar/svelte2react": "workspace:~",
-    "@sveltejs/vite-plugin-svelte": "^6.2.4",
-    "@types/node": "^24.12.3",
-    "@types/react": "^16.8.0",
-    "@types/react-dom": "^16.8.0",
-    "@vitejs/plugin-react": "^5.2.0",
-    "globals": "^17.6.0",
-    "typescript": "~6.0.2",
-    "vite": "7.3"
-  }
+	"name": "vite-example",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"dev:open": "vite --open",
+		"build": "tsc -b && vite build",
+		"preview": "vite preview",
+		"preinstall": "npx only-allow pnpm"
+	},
+	"dependencies": {
+		"react": "^16.8.0",
+		"react-dom": "^16.8.0",
+		"svelte": "^5.55.7"
+	},
+	"devDependencies": {
+		"@baykar/svelte2react": "workspace:~",
+		"@sveltejs/vite-plugin-svelte": "^6.2.4",
+		"@types/node": "^24.12.3",
+		"@types/react": "^16.8.0",
+		"@types/react-dom": "^16.8.0",
+		"@vitejs/plugin-react": "^5.2.0",
+		"globals": "^17.6.0",
+		"typescript": "~6.0.2",
+		"vite": "7.3"
+	}
 }

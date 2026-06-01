@@ -5,16 +5,16 @@ import svelte from 'rollup-plugin-svelte';
 import svelte2react from '../src/rollup';
 
 describe('rollup', async () => {
-	const { dirname } = import.meta
+	const { dirname } = import.meta;
 	await testFixtures(
 		['*.svelte'],
 		async (args, id) => {
 			const { snapshot } = await rollupBuild(id, [
 				svelte(),
-				svelte2react({ skipDependencyCheck: true }),
-			])
-			return snapshot
+				svelte2react({ skipDependencyCheck: true })
+			]);
+			return snapshot;
 		},
-		{ cwd: path.resolve(dirname, 'fixtures'), promise: true },
-	)
+		{ cwd: path.resolve(dirname, 'fixtures'), promise: true }
+	);
 });

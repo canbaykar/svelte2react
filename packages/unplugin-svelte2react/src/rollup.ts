@@ -4,7 +4,7 @@
  * @module
  */
 
-import { svelte2react } from './index'
+import { svelte2react } from './index';
 
 /**
  * Rollup plugin
@@ -19,6 +19,6 @@ import { svelte2react } from './index'
  * }
  * ```
  */
-const rollup = svelte2react.rollup as typeof svelte2react.rollup
-export default rollup
-export { rollup as 'module.exports' }
+const rollup = svelte2react.rollup as typeof svelte2react.rollup;
+export default rollup;
+export { rollup as 'module.exports' };

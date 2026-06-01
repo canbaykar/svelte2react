@@ -4,7 +4,7 @@
  * @module
  */
 
-import { svelte2react } from './index'
+import { svelte2react } from './index';
 
 /**
  * Webpack plugin
@@ -19,6 +19,6 @@ import { svelte2react } from './index'
  * }
  * ```
  */
-const webpack = svelte2react.webpack as typeof svelte2react.webpack
-export default webpack
-export { webpack as 'module.exports' }
+const webpack = svelte2react.webpack as typeof svelte2react.webpack;
+export default webpack;
+export { webpack as 'module.exports' };

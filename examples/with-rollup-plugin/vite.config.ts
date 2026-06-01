@@ -5,12 +5,7 @@ import Inspect from 'vite-plugin-inspect';
 import svelte2react from '@baykar/rollup-plugin-svelte2react';
 
 export default defineConfig({
-  // @ts-ignore
-  devtools: true,
-  plugins: [
-    Inspect(),
-    react(),
-    svelte(),
-    svelte2react(),
-  ],
+	// @ts-expect-error I don't know why devtools isn't defined
+	devtools: true,
+	plugins: [Inspect(), react(), svelte(), svelte2react()]
 });

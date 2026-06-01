@@ -38,7 +38,7 @@
 	},
 	"devDependencies": {
 		"typescript": "^6.0.3",
-        "utils": "workspace:~"
+		"utils": "workspace:~"
 	},
 	"repository": {
 		"type": "git",

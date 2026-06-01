@@ -4,7 +4,7 @@
  * @module
  */
 
-import { svelte2react } from './index'
+import { svelte2react } from './index';
 
 /**
  * Farm plugin
@@ -19,6 +19,6 @@ import { svelte2react } from './index'
  * }
  * ```
  */
-const farm = svelte2react.farm as typeof svelte2react.farm
-export default farm
-export { farm as 'module.exports' }
+const farm = svelte2react.farm as typeof svelte2react.farm;
+export default farm;
+export { farm as 'module.exports' };

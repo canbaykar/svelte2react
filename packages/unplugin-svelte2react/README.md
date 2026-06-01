@@ -36,11 +36,11 @@ npm i -D unplugin-svelte2react
 
 ```ts
 // vite.config.ts
-import svelte2react from 'unplugin-svelte2react/vite'
+import svelte2react from 'unplugin-svelte2react/vite';
 
 export default defineConfig({
-  plugins: [svelte2react()],
-})
+	plugins: [svelte2react()]
+});
 ```
 
 <br></details>
@@ -50,11 +50,11 @@ export default defineConfig({
 
 ```ts
 // rollup.config.js
-import svelte2react from 'unplugin-svelte2react/rollup'
+import svelte2react from 'unplugin-svelte2react/rollup';
 
 export default {
-  plugins: [svelte2react()],
-}
+	plugins: [svelte2react()]
+};
 ```
 
 <br></details>
@@ -64,11 +64,11 @@ export default {
 
 ```ts
 // rolldown.config.ts / tsdown.config.ts
-import svelte2react from 'unplugin-svelte2react/rolldown'
+import svelte2react from 'unplugin-svelte2react/rolldown';
 
 export default {
-  plugins: [svelte2react()],
-}
+	plugins: [svelte2react()]
+};
 ```
 
 <br></details>
@@ -77,12 +77,12 @@ export default {
 <summary>esbuild</summary><br>
 
 ```ts
-import { build } from 'esbuild'
-import svelte2react from 'unplugin-svelte2react/esbuild'
+import { build } from 'esbuild';
+import svelte2react from 'unplugin-svelte2react/esbuild';
 
 build({
-  plugins: [svelte2react()],
-})
+	plugins: [svelte2react()]
+});
 ```
 
 <br></details>
@@ -92,12 +92,12 @@ build({
 
 ```js
 // webpack.config.js
-import svelte2react from 'unplugin-svelte2react/webpack'
+import svelte2react from 'unplugin-svelte2react/webpack';
 
 export default {
-  /* ... */
-  plugins: [svelte2react()],
-}
+	/* ... */
+	plugins: [svelte2react()]
+};
 ```
 
 <br></details>
@@ -107,12 +107,12 @@ export default {
 
 ```ts
 // rspack.config.js
-import svelte2react from 'unplugin-svelte2react/rspack'
+import svelte2react from 'unplugin-svelte2react/rspack';
 
 export default {
-  /* ... */
-  plugins: [svelte2react()],
-}
+	/* ... */
+	plugins: [svelte2react()]
+};
 ```
 
 <br></details>

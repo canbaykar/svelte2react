@@ -4,7 +4,7 @@
  * @module
  */
 
-import { svelte2react } from './index'
+import { svelte2react } from './index';
 
 /**
  * Esbuild plugin
@@ -17,6 +17,6 @@ import { svelte2react } from './index'
  * build({ plugins: [svelte2react()] })
 ```
  */
-const esbuild = svelte2react.esbuild as typeof svelte2react.esbuild
-export default esbuild
-export { esbuild as 'module.exports' }
+const esbuild = svelte2react.esbuild as typeof svelte2react.esbuild;
+export default esbuild;
+export { esbuild as 'module.exports' };

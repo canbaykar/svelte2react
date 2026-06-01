@@ -1,12 +1,12 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Attach to TS Server",
-            "type": "node",
-            "request": "attach",
-            "port": 5859,
-            "sourceMaps": true,
-        }
-    ]
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Attach to TS Server",
+			"type": "node",
+			"request": "attach",
+			"port": 5859,
+			"sourceMaps": true
+		}
+	]
 }

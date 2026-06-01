@@ -4,7 +4,7 @@
  * @module
  */
 
-import { svelte2react } from './index'
+import { svelte2react } from './index';
 
 /**
  * Rspack plugin
@@ -19,6 +19,6 @@ import { svelte2react } from './index'
  * }
  * ```
  */
-const rspack = svelte2react.rspack as typeof svelte2react.rspack
-export default rspack
-export { rspack as 'module.exports' }
+const rspack = svelte2react.rspack as typeof svelte2react.rspack;
+export default rspack;
+export { rspack as 'module.exports' };
