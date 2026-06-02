@@ -1,5 +1,5 @@
 {
-	"name": "unplugin-svelte2react",
+	"name": "@baykar/unplugin-svelte2react",
 	"type": "module",
 	"version": "0.0.0",
 	"packageManager": "pnpm@11.3.0",
@@ -37,7 +37,6 @@
 	],
 	"exports": {
 		".": "./dist/index.js",
-		"./api": "./dist/api.js",
 		"./esbuild": "./dist/esbuild.js",
 		"./farm": "./dist/farm.js",
 		"./rolldown": "./dist/rolldown.js",

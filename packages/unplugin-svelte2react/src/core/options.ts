@@ -22,7 +22,7 @@ export interface Options {
 	/**
 	 * Will change plugin execution order in some bundlers
 	 * (e.g. https://vite.dev/guide/api-plugin.html#plugin-ordering).
-	 * @default 'pre'
+	 * @default undefined
 	 */
 	enforce?: 'pre' | 'post' | undefined;
 }
@@ -36,6 +36,6 @@ export function resolveOptions(opts: Options): OptionsResolved {
 		skipDependencyCheck: opts.skipDependencyCheck ?? false,
 		include: opts.include || [/\.svelte$/],
 		exclude: opts.exclude || [/node_modules/],
-		enforce: 'enforce' in opts ? opts.enforce : 'pre'
+		enforce: 'enforce' in opts ? opts.enforce : undefined
 	};
 }

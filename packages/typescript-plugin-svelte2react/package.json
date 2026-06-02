@@ -1,7 +1,7 @@
 {
 	"name": "@baykar/typescript-plugin-svelte2react",
 	"version": "0.0.0",
-	"description": "Typescript plugin used together with rollup-plugin-svelte2react.",
+	"description": "Typescript plugin used together with unplugin-svelte2react.",
 	"private": false,
 	"keywords": [
 		"typescript",

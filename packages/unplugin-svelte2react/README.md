@@ -13,7 +13,7 @@ See [unplugin](https://github.com/unjs/unplugin).
 To use this template, clone it down using:
 
 ```bash
-npx degit sxzz/unplugin-svelte2react unplugin-my-plugin
+npx degit baykar/unplugin-svelte2react unplugin-my-plugin
 ```
 
 And do a global replacement of `unplugin-svelte2react` with your plugin name.
