@@ -5,7 +5,12 @@
 		"lib": ["ES2023", "DOM"],
 		"module": "esnext",
 		"types": ["vite/client", "svelte"],
-		"jsx": "react-jsx"
+		"jsx": "react-jsx",
+		"plugins": [
+			{
+				"name": "@baykar/typescript-plugin-svelte2react"
+			}
+		]
 	},
 	"include": ["src", "vite.config.ts"]
 }

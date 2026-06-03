@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import ReactButton from './ReactButton';
-// @ts-expect-error TypeScript can't see exports defined by bundler plugins
+
 import { SvelteButtonX } from './SvelteButton.svelte';
 
 export default function App() {

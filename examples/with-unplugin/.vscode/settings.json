@@ -1,3 +1,7 @@
 {
-	"js/ts.tsdk.path": "node_modules\\typescript\\lib"
+	// Use TypeScript from node_modules instead of from VS Code
+	// This helps the TS plugin in tsconfig work.
+	"js/ts.tsdk.path": "node_modules\\typescript\\lib",
+	"js/ts.tsdk.promptToUseWorkspaceVersion": true,
+	
 }
