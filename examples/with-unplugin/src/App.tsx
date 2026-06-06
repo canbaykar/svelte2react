@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import ReactButton from './ReactButton';
 
-import { SvelteButtonX } from './SvelteButton.svelte';
+import { SvelteButtonWrapped } from './SvelteButton.svelte';
 
 export default function App() {
 	const [name, setName] = useState('Mark');
@@ -19,7 +19,7 @@ export default function App() {
 			</label>
 
 			<ReactButton name={name} />
-			<SvelteButtonX name={name} />
+			<SvelteButtonWrapped name={name} />
 		</section>
 	);
 }

@@ -12,6 +12,7 @@ dist
 dist-ssr
 .svelte-kit
 *.local
+.vite-inspect
 
 # Editor directories and files
 .idea

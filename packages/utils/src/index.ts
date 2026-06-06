@@ -1,6 +1,37 @@
 import path from 'node:path';
 import { pascalCase } from 'scule';
 
+export interface TSPluginOptions {
+	/** Prefix of export @default '' */
+	prefix?: string;
+	/** Suffix of export @default 'X' */
+	suffix?: string;
+	/** Override export name with constant (ignores prefix and suffix) @default undefined */
+	constant?: string;
+}
+
+type Overwrite<T, U> = Pick<T, Exclude<keyof T, keyof U>> & U;
+export type TSPluginOptionsResolved = Overwrite<
+	Required<TSPluginOptions>,
+	Pick<TSPluginOptions, 'constant'>
+>;
+
+function resolveTSPluginOptions(o: TSPluginOptions): TSPluginOptionsResolved {
+	return {
+		prefix: o.prefix ?? '',
+		suffix: o.suffix ?? 'X',
+		constant: o.constant
+	};
+}
+/**
+ * Resolve the function that transforms svelte component name to react component
+ * name from TS Plugin options.
+ */
+export function resolveTransformName(o: TSPluginOptions): (name: string) => string {
+	const o_ = resolveTSPluginOptions(o);
+	return o_.constant ? () => o_.constant! : (name: string) => o_.prefix + name + o_.suffix;
+}
+
 // Copied (modified) from classNameFromFilename in:
 // https://github.com/sveltejs/language-tools/blob/6bd8b175ad5918b5822e4323a4e67d79918eff84/packages/svelte2tsx/src/svelte2tsx/addComponentExport.ts#L1
 // Modifications here don't change behaviour from the original unless commented otherwise.

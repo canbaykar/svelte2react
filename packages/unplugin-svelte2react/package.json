@@ -36,14 +36,14 @@
 		"svelte2react"
 	],
 	"exports": {
-		".": "./dist/index.js",
-		"./esbuild": "./dist/esbuild.js",
-		"./farm": "./dist/farm.js",
-		"./rolldown": "./dist/rolldown.js",
-		"./rollup": "./dist/rollup.js",
-		"./rspack": "./dist/rspack.js",
-		"./vite": "./dist/vite.js",
-		"./webpack": "./dist/webpack.js",
+		".": "./dist/index.mjs",
+		"./esbuild": "./dist/esbuild.mjs",
+		"./farm": "./dist/farm.mjs",
+		"./rolldown": "./dist/rolldown.mjs",
+		"./rollup": "./dist/rollup.mjs",
+		"./rspack": "./dist/rspack.mjs",
+		"./vite": "./dist/vite.mjs",
+		"./webpack": "./dist/webpack.mjs",
 		"./package.json": "./package.json"
 	},
 	"typesVersions": {
@@ -74,6 +74,8 @@
 		"prepublishOnly": "pnpm run build"
 	},
 	"dependencies": {
+		"get-tsconfig": "^4.14.0",
+		"utils": "workspace:~",
 		"unplugin": "^3.0.0"
 	},
 	"peerDependencies": {
@@ -91,7 +93,6 @@
 		"tsdown": "^0.22.0",
 		"tsdown-preset-sxzz": "^0.6.0",
 		"typescript": "^6.0.2",
-		"utils": "workspace:~",
 		"vitest": "^4.1.4"
 	}
 }

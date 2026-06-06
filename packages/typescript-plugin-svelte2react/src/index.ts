@@ -1,5 +1,5 @@
 import type ts from 'typescript/lib/tsserverlibrary';
-import { id2componentName } from 'utils';
+import { id2componentName, resolveTransformName } from 'utils';
 
 // Start of svelte output pre Svelte 4
 const oldStart = `///<reference types="svelte" />
@@ -8,14 +8,13 @@ const oldStart = `///<reference types="svelte" />
 const getSuffix = (exportName: string, old: boolean) => `
 ;export const ${exportName}: (props: ReturnType<typeof ${old ? '' : '$$'}render>["props"]) => JSX.Element = {} as any;`;
 
-/** Svelte component name to wrapped component name */
-const transformName = (name: string) => name + 'X';
-
 function init(modules: { typescript: typeof ts }): ts.server.PluginModule {
 	const ts = modules.typescript;
 
 	function create(info: ts.server.PluginCreateInfo) {
 		const lsh = info.languageServiceHost;
+
+		const transformName = resolveTransformName(info.config);
 
 		const _getScriptSnapshot = lsh.getScriptSnapshot.bind(lsh);
 		lsh.getScriptSnapshot = (filename) => {

@@ -2,17 +2,18 @@ import path from 'node:path';
 import fs from 'node:fs';
 import { createUnplugin, type UnpluginInstance } from 'unplugin';
 import { resolveOptions, type Options } from './core/options';
-import { id2componentName } from 'utils';
+import { id2componentName, resolveTransformName } from 'utils';
+import { getTsconfig } from 'get-tsconfig';
 
 const PLUGIN_NAME = 'svelte2react';
 const PLUGIN_FULL_NAME = 'unplugin-' + PLUGIN_NAME;
 const DEPENDENCY = '@baykar/svelte2react';
-
-const transformName = (name: string) => name + 'X';
+const TS_PLUGIN = '@baykar/typescript-plugin-svelte2react';
 
 export const svelte2react: UnpluginInstance<Options | undefined, false> = createUnplugin(
 	(rawOptions = {}) => {
 		const options = resolveOptions(rawOptions);
+		let transformName = resolveTransformName({});
 
 		return {
 			name: PLUGIN_FULL_NAME,
@@ -20,8 +21,17 @@ export const svelte2react: UnpluginInstance<Options | undefined, false> = create
 
 			// Only for dependency check error
 			buildStart() {
+				// --- Update transformName ---
+				const tsconfig = getTsconfig(options.tsconfig);
+				const tsPluginOptions =
+					(tsconfig?.config?.compilerOptions?.plugins ?? []).find(
+						(p) => p.name === TS_PLUGIN
+					) ?? {};
+				transformName = resolveTransformName(tsPluginOptions);
+
 				if (options.skipDependencyCheck) return;
 
+				// --- Dependency Check ---
 				const pkgPath = path.resolve(process.cwd(), 'package.json');
 				let pkgRead = false;
 				try {
