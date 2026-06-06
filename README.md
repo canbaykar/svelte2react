@@ -84,6 +84,6 @@ Some Svelte and React features obviously won't make sense or won't work. To name
 - ❌ Svelte bindings
   ```svelte
   <script lang="ts">
-    let { value = $bindable(), ...props } = $props();
+    let { value = $bindable() } = $props();
   </script>
   ```
