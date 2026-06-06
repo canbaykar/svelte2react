@@ -7,7 +7,9 @@
 		"build": "pnpm -r --filter=./packages/* build",
 		"changeset": "changeset",
 		"ci:publish": "changeset publish",
-		"lint": "prettier --check . --config config/.prettierrc && eslint . --config config/eslint.config.js",
+		"lint": "pnpm prettier && eslint . --config config/eslint.config.js",
+		"prettier": "prettier --check . --config config/.prettierrc",
+		"prettier:write": "prettier --write . --config config/.prettierrc",
 		"test": "pnpm -r --filter=./examples/* build && vitest"
 	},
 	"devDependencies": {
