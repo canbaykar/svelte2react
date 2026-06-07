@@ -8,7 +8,7 @@
 		"jsx": "react-jsx",
 		"plugins": [
 			{
-				"name": "@baykar/typescript-plugin-svelte2react",
+				"name": "@baykar/ts-plugin-svelte2react",
 				"suffix": "Wrapped"
 			}
 		]

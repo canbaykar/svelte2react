@@ -8,7 +8,7 @@ import { getTsconfig } from 'get-tsconfig';
 const PLUGIN_NAME = 'svelte2react';
 const PLUGIN_FULL_NAME = 'unplugin-' + PLUGIN_NAME;
 const DEPENDENCY = '@baykar/svelte2react';
-const TS_PLUGIN = '@baykar/typescript-plugin-svelte2react';
+const TS_PLUGIN = '@baykar/ts-plugin-svelte2react';
 
 export const svelte2react: UnpluginInstance<Options | undefined, false> = createUnplugin(
 	(rawOptions = {}) => {

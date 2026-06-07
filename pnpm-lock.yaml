@@ -66,9 +66,9 @@ importers:
       '@baykar/svelte2react':
         specifier: workspace:~
         version: link:../../packages/svelte2react
-      '@baykar/typescript-plugin-svelte2react':
+      '@baykar/ts-plugin-svelte2react':
         specifier: workspace:~
-        version: link:../../packages/typescript-plugin-svelte2react
+        version: link:../../packages/ts-plugin-svelte2react
       '@baykar/unplugin-svelte2react':
         specifier: workspace:~
         version: link:../../packages/unplugin-svelte2react
@@ -159,7 +159,7 @@ importers:
         specifier: ^2.5.7
         version: 2.5.7(svelte@5.56.0(@typescript-eslint/types@8.60.0))(typescript@6.0.3)
 
-  packages/typescript-plugin-svelte2react:
+  packages/ts-plugin-svelte2react:
     devDependencies:
       typescript:
         specifier: ^6.0.3

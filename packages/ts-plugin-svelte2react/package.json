@@ -1,11 +1,13 @@
 {
-	"name": "@baykar/typescript-plugin-svelte2react",
+	"name": "@baykar/ts-plugin-svelte2react",
 	"version": "0.0.0",
 	"description": "Typescript plugin used together with unplugin-svelte2react.",
 	"private": false,
 	"keywords": [
 		"typescript",
+		"ts",
 		"typescript-plugin",
+		"ts-plugin",
 		"svelte",
 		"svelte5",
 		"react",
