@@ -17,10 +17,12 @@ To get this example working on your computer:
     # Build svelte2react
     pnpm build
     # Enter into the example directory
-    cd example
+    cd examples
+    cd with-unplugin
     # Install the dependencies for the example application
     pnpm i
     # Finally, run the example application
     pnpm dev:open
     # You can stop the Vite server with Ctrl+C
     ```
+	Additionally make sure your editor uses the TypeScript version stored in your `node_modules`. (In VS Code via: `Ctrl+Shift+P` → `>TypeScript: Select TypeScript Version`. You may need to open a `.js` or `.ts` file first for this command to appear in the Command Palette.)

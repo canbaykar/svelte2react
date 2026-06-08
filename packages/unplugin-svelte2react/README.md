@@ -1,34 +1,11 @@
-# unplugin-svelte2react (WIP!)
+# unplugin-svelte2react
 
-[![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![Unit Test][unit-test-src]][unit-test-href]
+Unplugin for [svelte2react](../../).
 
-See [unplugin](https://github.com/unjs/unplugin).
-
-<!-- Remove Start -->
-
-## Template Usage
-
-To use this template, clone it down using:
+## Install
 
 ```bash
-npx degit baykar/unplugin-svelte2react unplugin-my-plugin
-```
-
-And do a global replacement of `unplugin-svelte2react` with your plugin name.
-
-Then you can start developing your unplugin 🔥
-
-To run unit tests, run: `pnpm run test`.
-To release a new version, run: `pnpm run release`.
-
-<!-- Remove End -->
-
-## Installation
-
-```bash
-npm i -D unplugin-svelte2react
+npm i -D @baykar/unplugin-svelte2react
 ```
 
 <details>
@@ -36,7 +13,7 @@ npm i -D unplugin-svelte2react
 
 ```ts
 // vite.config.ts
-import svelte2react from 'unplugin-svelte2react/vite';
+import svelte2react from '@baykar/unplugin-svelte2react/vite';
 
 export default defineConfig({
 	plugins: [svelte2react()]
@@ -50,7 +27,7 @@ export default defineConfig({
 
 ```ts
 // rollup.config.js
-import svelte2react from 'unplugin-svelte2react/rollup';
+import svelte2react from '@baykar/unplugin-svelte2react/rollup';
 
 export default {
 	plugins: [svelte2react()]
@@ -64,7 +41,7 @@ export default {
 
 ```ts
 // rolldown.config.ts / tsdown.config.ts
-import svelte2react from 'unplugin-svelte2react/rolldown';
+import svelte2react from '@baykar/unplugin-svelte2react/rolldown';
 
 export default {
 	plugins: [svelte2react()]
@@ -78,7 +55,7 @@ export default {
 
 ```ts
 import { build } from 'esbuild';
-import svelte2react from 'unplugin-svelte2react/esbuild';
+import svelte2react from '@baykar/unplugin-svelte2react/esbuild';
 
 build({
 	plugins: [svelte2react()]
@@ -92,7 +69,7 @@ build({
 
 ```js
 // webpack.config.js
-import svelte2react from 'unplugin-svelte2react/webpack';
+import svelte2react from '@baykar/unplugin-svelte2react/webpack';
 
 export default {
 	/* ... */
@@ -107,7 +84,7 @@ export default {
 
 ```ts
 // rspack.config.js
-import svelte2react from 'unplugin-svelte2react/rspack';
+import svelte2react from '@baykar/unplugin-svelte2react/rspack';
 
 export default {
 	/* ... */

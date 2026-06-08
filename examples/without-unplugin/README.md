@@ -17,7 +17,8 @@ To get this example working on your computer:
     # Build svelte2react
     pnpm build
     # Enter into the example directory
-    cd example
+    cd examples
+    cd without-unplugin
     # Install the dependencies for the example application
     pnpm i
     # Finally, run the example application
