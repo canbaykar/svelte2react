@@ -129,7 +129,7 @@ export default defineConfig({
 });
 ```
 (For other bundlers see [unplugin-svelte2react README](./packages/unplugin-svelte2react/).)
-```json
+```jsonc
 // tsconfig.json
 {
 	"compilerOptions": {
@@ -146,7 +146,7 @@ Now in order to get [ts-plugin-svelte2react](./packages/ts-plugin-svelte2react/)
 npm i -D typescript
 ```
 Then set your workspace version of TypeScript the the instance in your `node_modules`:
-```json
+```jsonc
 // .vscode/settings.json
 {
 	"js/ts.tsdk.path": "node_modules\\typescript\\lib",
@@ -251,7 +251,7 @@ export default defineConfig({
 
 #### TypeScript Configuration
 
-```json
+```jsonc
 // tsconfig.json
 {
 	"compilerOptions": {
