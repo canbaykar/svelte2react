@@ -1,6 +1,6 @@
 # ts-plugin-svelte2react
 
-TypeScript language service plugin for [svelte2react](../../).
+TypeScript language service plugin for [svelte2react](https://github.com/canbaykar/svelte2react/).
 
 ## Install
 
@@ -24,4 +24,4 @@ npm i -D @baykar/ts-plugin-svelte2react
 }
 ```
 
-See [svelte2react README](../../) for configuration options and additional instructions on how to use this plugin.
+See [svelte2react README](https://github.com/canbaykar/svelte2react/) for configuration options and additional instructions on how to use this plugin.

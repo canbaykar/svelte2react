@@ -1,6 +1,6 @@
 # unplugin-svelte2react
 
-Unplugin for [svelte2react](../../).
+Unplugin for [svelte2react](https://github.com/canbaykar/svelte2react/).
 
 ## Install
 
