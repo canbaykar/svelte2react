@@ -25,4 +25,4 @@ To get this example working on your computer:
     pnpm dev:open
     # You can stop the Vite server with Ctrl+C
     ```
-	Additionally make sure your editor uses the TypeScript version stored in your `node_modules`. (In VS Code via: `Ctrl+Shift+P` → `>TypeScript: Select TypeScript Version`. You may need to open a `.js` or `.ts` file first for this command to appear in the Command Palette.)
+    Additionally make sure your editor uses the TypeScript version stored in your `node_modules`. (In VS Code via: `Ctrl+Shift+P` → `>TypeScript: Select TypeScript Version`. You may need to open a `.js` or `.ts` file first for this command to appear in the Command Palette.)

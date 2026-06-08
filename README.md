@@ -1,31 +1,33 @@
 # svelte2react
 
-*Use Svelte 4 components in React.*
+_Use Svelte 4 components in React._
 
 There are two ways to use **svelte2react**:
 
 - [**Manual**](#way-1-manual): Turn Svelte components to React by using `Wrap`.
-	```tsx
-	import { Wrap } from '@baykar/svelte2react';
-	import SvelteButton from './SvelteButton.svelte';
-	const WrappedSvelteButton = Wrap(SvelteButton);
 
-	function render() {
-		const [name, setName] = useState('Mark');
-		return <SvelteButtonX name={name} onclick={() => setName("Jack")} />;
-	}
-	```
+    ```tsx
+    import { Wrap } from '@baykar/svelte2react';
+    import SvelteButton from './SvelteButton.svelte';
+    const WrappedSvelteButton = Wrap(SvelteButton);
+
+    function render() {
+    	const [name, setName] = useState('Mark');
+    	return <SvelteButtonX name={name} onclick={() => setName('Jack')} />;
+    }
+    ```
 
 - [**Automatic (🚧WIP🚧)**](#way-2-automatic): Automatically generate React versions of all Svelte compunents using [unplugin-svelte2react](./packages/unplugin-svelte2react/) and [ts-plugin-svelte2react](./packages/ts-plugin-svelte2react/).
-	```tsx
-	// ✨ Auto-generated React component! ✨
-	import { SvelteButtonX } from './SvelteButton.svelte';
 
-	function render() {
-		const [name, setName] = useState('Mark');
-		return <SvelteButtonX name={name} onclick={() => setName("Jack")} />;
-	}
-	```
+    ```tsx
+    // ✨ Auto-generated React component! ✨
+    import { SvelteButtonX } from './SvelteButton.svelte';
+
+    function render() {
+    	const [name, setName] = useState('Mark');
+    	return <SvelteButtonX name={name} onclick={() => setName('Jack')} />;
+    }
+    ```
 
 ## Caveats
 
@@ -106,7 +108,7 @@ Now the rendered `SvelteButton` will react to changes to `name` (without re-init
 ## Way 2: Automatic (🚧WIP🚧)
 
 > [!IMPORTANT]
-> Using **svelte2react** this way doesn't support `tsc`, `svelte-check`, or an alternative to these yet. Because of this, the automatic method is work-in-progress. Although type-checking while editing *is* supported.
+> Using **svelte2react** this way doesn't support `tsc`, `svelte-check`, or an alternative to these yet. Because of this, the automatic method is work-in-progress. Although type-checking while editing _is_ supported.
 
 ### Install
 
@@ -128,24 +130,31 @@ export default defineConfig({
 	plugins: [react(), svelte(), svelte2react()]
 });
 ```
+
 (For other bundlers see [unplugin-svelte2react README](./packages/unplugin-svelte2react/).)
+
 ```jsonc
 // tsconfig.json
 {
 	"compilerOptions": {
-		"plugins": [{
-			"name": "@baykar/ts-plugin-svelte2react",
-			"suffix": "X"
-		}]
-	},
+		"plugins": [
+			{
+				"name": "@baykar/ts-plugin-svelte2react",
+				"suffix": "X"
+			}
+		]
+	}
 }
 ```
 
 Now in order to get [ts-plugin-svelte2react](./packages/ts-plugin-svelte2react/) to work, we need to do some editor specific configuration. The following part describes the steps for [Visual Studio Code](https://code.visualstudio.com/). Firstly, install TypeScript into your `node_modules`:
+
 ```bash
 npm i -D typescript
 ```
+
 Then set your workspace version of TypeScript the the instance in your `node_modules`:
+
 ```jsonc
 // .vscode/settings.json
 {
@@ -153,6 +162,7 @@ Then set your workspace version of TypeScript the the instance in your `node_mod
 	"js/ts.tsdk.promptToUseWorkspaceVersion": true
 }
 ```
+
 Make sure VS Code uses the TypeScript instance in your `node_modules` via: `Ctrl+Shift+P` → `>TypeScript: Select TypeScript Version`. (You may need to open a `.js` or `.ts` file first for this command to appear in the Command Palette.)
 
 > [!IMPORTANT]
@@ -214,6 +224,7 @@ If you run into any issues, try these:
 ### Configuration
 
 There are two places to configure **svelte2react**:
+
 - In your [bundler configuration](#bundler-configuration) (`vite.config.js`, `webpack.config.js`, etc...)
 - In your [TypeScript configuration](#typescript-configuration) (`tsconfig.json`)
 
@@ -224,12 +235,12 @@ There are two places to configure **svelte2react**:
 // Imports...
 export default defineConfig({
 	plugins: [
-		react(), 
-		svelte(), 
+		react(),
+		svelte(),
 		svelte2react({
 			// 👈 svelte2react bundler config here
 		})
-	],
+	]
 });
 ```
 
@@ -245,8 +256,8 @@ export default defineConfig({
 > [TS configuration](#typescript-configuration) also affects bundler behaviour. Some options had to be placed there so that [the TS Plugin](./packages/ts-plugin-svelte2react/) can also reach them.
 
 > [!NOTE]
-> You don't need to set `include` and `exclude` to only process `.svelte` files as that check is done later anyway. But setting them up so that non-`.svelte` files are filtered-out may improve bundler performance. 
-> 
+> You don't need to set `include` and `exclude` to only process `.svelte` files as that check is done later anyway. But setting them up so that non-`.svelte` files are filtered-out may improve bundler performance.
+>
 > These are used as [unplugin hook filters](https://unplugin.unjs.io/guide/#filters) for file `id`, see [Rolldown hook filter documentation](https://rolldown.rs/apis/plugin-api/hook-filters#plugin-hook-filters) (even if you aren't using Rolldown) for technical details.
 
 #### TypeScript Configuration
@@ -255,11 +266,13 @@ export default defineConfig({
 // tsconfig.json
 {
 	"compilerOptions": {
-		"plugins": [{
-			"name": "@baykar/ts-plugin-svelte2react",
-			// 👈 svelte2react TS config here
-		}]
-	},
+		"plugins": [
+			{
+				"name": "@baykar/ts-plugin-svelte2react"
+				// 👈 svelte2react TS config here
+			}
+		]
+	}
 }
 ```
 
@@ -270,9 +283,11 @@ export default defineConfig({
 | `constant` | `string` | `undefined` | Overrides the export name entirely (ignores `prefix` and `suffix`). |
 
 When `prefix: '_'` and `suffix: 'ABC'`, a React component can be exported from `comp.svelte` like:
+
 ```ts
 import { _CompABC } from './comp.svelte';
 ```
+
 When `constant: 'Wrapped'`, that becomes:
 
 ```ts

@@ -14,11 +14,13 @@ npm i -D @baykar/ts-plugin-svelte2react
 // tsconfig.json
 {
 	"compilerOptions": {
-		"plugins": [{
-			"name": "@baykar/ts-plugin-svelte2react",
-			"suffix": "X"
-		}]
-	},
+		"plugins": [
+			{
+				"name": "@baykar/ts-plugin-svelte2react",
+				"suffix": "X"
+			}
+		]
+	}
 }
 ```
 
