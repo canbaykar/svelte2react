@@ -63,6 +63,8 @@ export const svelte2react: UnpluginInstance<Options | undefined, false> = create
 				},
 
 				handler(code, id) {
+					if (path.extname(id) !== '.svelte') return;
+
 					// svelteComponentName has to match the default export in code but,
 					// wrappedComponentName has to match svetle2react's TypeScript plugin's
 					// export. 1st is determined by Svelte compiler, while 2nd is determined
