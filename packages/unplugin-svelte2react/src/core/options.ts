@@ -10,12 +10,12 @@ export interface Options {
 	 */
 	skipDependencyCheck?: boolean;
 	/**
-	 * Files to include
+	 * Files to include. Accepts glob string, RegExp, or an array of them.
 	 * @default [/\.svelte$/]
 	 */
 	include?: FilterPattern;
 	/**
-	 * Files to exclude
+	 * Files to exclude. Accepts glob string, RegExp, or an array of them.
 	 * @default [/node_modules/]
 	 */
 	exclude?: FilterPattern;
