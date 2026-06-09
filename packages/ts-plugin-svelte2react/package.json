@@ -20,11 +20,13 @@
 	"type": "commonjs",
 	"scripts": {
 		"build": "tsc",
-		"watch": "tsc --watch"
+		"watch": "tsc --watch",
+		"prepare": "generate-license-file --input package.json --output THIRD-PARTY-LICENSES.txt --overwrite"
 	},
 	"files": [
 		"dist",
-		"README.md"
+		"*LICENSE*",
+		"*NOTICE*"
 	],
 	"types": "./dist/index.d.ts",
 	"main": "./dist/index.js",

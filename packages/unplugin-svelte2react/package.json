@@ -55,7 +55,9 @@
 		}
 	},
 	"files": [
-		"dist"
+		"dist",
+		"*LICENSE*",
+		"*NOTICE*"
 	],
 	"publishConfig": {
 		"access": "public"
@@ -71,12 +73,12 @@
 		"test": "vitest",
 		"typecheck": "tsc --noEmit",
 		"release": "bumpp",
-		"prepublishOnly": "pnpm run build"
+		"prepare": "generate-license-file --input package.json --output THIRD-PARTY-LICENSES.txt --overwrite"
 	},
 	"dependencies": {
 		"get-tsconfig": "^4.14.0",
-		"utils": "workspace:~",
-		"unplugin": "^3.0.0"
+		"unplugin": "^3.0.0",
+		"utils": "workspace:~"
 	},
 	"peerDependencies": {
 		"@baykar/svelte2react": "workspace:~",
