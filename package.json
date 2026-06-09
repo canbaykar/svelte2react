@@ -6,7 +6,7 @@
 	"scripts": {
 		"build": "pnpm -r --filter=./packages/* build",
 		"changeset": "changeset",
-		"ci:publish": "changeset tag && pnpm publish -r --access public",
+		"ci:publish": "changeset publish",
 		"lint": "pnpm prettier && eslint . --config config/eslint.config.js",
 		"prettier": "prettier --check . --config config/.prettierrc",
 		"prettier:write": "prettier --write . --config config/.prettierrc",
@@ -30,11 +30,5 @@
 		"typescript-eslint": "^8.60.0",
 		"vitest": "^4.1.7"
 	},
-	"devEngines": {
-		"packageManager": {
-			"name": "pnpm",
-			"version": ">=11",
-			"onFail": "error"
-		}
-	}
+	"packageManager": "pnpm@11.3.0"
 }

@@ -65,13 +65,7 @@
 	"engines": {
 		"node": ">=20.19.0"
 	},
-	"devEngines": {
-		"packageManager": {
-			"name": "pnpm",
-			"version": "11.3.0",
-			"onFail": "error"
-		}
-	},
+	"packageManager": "pnpm@11.3.0",
 	"scripts": {
 		"lint": "eslint --cache .",
 		"lint:fix": "pnpm run lint --fix",

@@ -34,13 +34,7 @@
 	"engines": {
 		"node": ">=24"
 	},
-	"devEngines": {
-		"packageManager": {
-			"name": "pnpm",
-			"version": ">=11",
-			"onFail": "error"
-		}
-	},
+	"packageManager": "pnpm@11.3.0",
 	"devDependencies": {
 		"typescript": "^6.0.3",
 		"utils": "workspace:~"
