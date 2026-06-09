@@ -4,7 +4,7 @@
 
 ### Minor Changes
 
-- 72dc30e: Fixed NPM configuration. Added unplugin and TS plugin.
+- 72dc30e: Added unplugin and TS plugin.
 
 ### Patch Changes
 

@@ -21,10 +21,10 @@
 		"prepare": "generate-license-file --input package.json --output THIRD-PARTY-LICENSES.txt --overwrite"
 	},
 	"files": [
-		"dist",
+		"dist/**/*",
 		"*LICENSE*",
 		"*NOTICE*",
-		"CHANGELOG..md"
+		"CHANGELOG.md"
 	],
 	"types": "./dist/index.d.ts",
 	"main": "./dist/index.js",
