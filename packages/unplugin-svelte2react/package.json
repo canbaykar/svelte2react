@@ -2,7 +2,6 @@
 	"name": "@baykar/unplugin-svelte2react",
 	"type": "module",
 	"version": "0.0.0",
-	"packageManager": "pnpm@11.3.0",
 	"description": "Automatically turn Svelte components to React components.",
 	"author": "Togan Can Baykar",
 	"license": "0BSD",
@@ -65,6 +64,13 @@
 	},
 	"engines": {
 		"node": ">=20.19.0"
+	},
+	"devEngines": {
+		"packageManager": {
+			"name": "pnpm",
+			"version": "11.3.0",
+			"onFail": "error"
+		}
 	},
 	"scripts": {
 		"lint": "eslint --cache .",
