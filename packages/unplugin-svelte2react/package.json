@@ -57,7 +57,8 @@
 	"files": [
 		"dist",
 		"*LICENSE*",
-		"*NOTICE*"
+		"*NOTICE*",
+		"CHANGELOG..md"
 	],
 	"publishConfig": {
 		"access": "public"
