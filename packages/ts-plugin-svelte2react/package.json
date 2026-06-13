@@ -1,50 +1,50 @@
 {
-    "name":  "@baykar/ts-plugin-svelte2react",
-    "version":  "0.1.1",
-    "description":  "Typescript plugin used together with unplugin-svelte2react.",
-    "private":  false,
-    "keywords":  [
-                     "typescript",
-                     "ts",
-                     "typescript-plugin",
-                     "ts-plugin",
-                     "svelte",
-                     "svelte5",
-                     "react",
-                     "cross-framework",
-                     "svelte-to-react",
-                     "svelte2react"
-                 ],
-    "license":  "0BSD",
-    "author":  "Togan Can Baykar",
-    "type":  "commonjs",
-    "scripts":  {
-                    "build":  "tsc",
-                    "watch":  "tsc --watch",
-                    "prepare":  "generate-license-file --input package.json --output THIRD-PARTY-LICENSES.txt --overwrite"
-                },
-    "files":  [
-                  "dist/**/*",
-                  "*LICENSE*",
-                  "*NOTICE*",
-                  "CHANGELOG.md"
-              ],
-    "types":  "./dist/index.d.ts",
-    "main":  "./dist/index.js",
-    "engines":  {
-                    "node":  "\u003e=24"
-                },
-    "packageManager":  "pnpm@11.3.0",
-    "devDependencies":  {
-                            "typescript":  "^6.0.3",
-                            "utils":  "workspace:~"
-                        },
-    "repository":  {
-                       "type":  "git",
-                       "url":  "git+https://github.com/canbaykar/svelte2react.git"
-                   },
-    "homepage":  "https://github.com/canbaykar/svelte2react/tree/main/packages/ts-plugin-svelte2react#readme",
-    "bugs":  {
-                 "url":  "https://github.com/canbaykar/svelte2react/issues"
-             }
+	"name": "@baykar/ts-plugin-svelte2react",
+	"version": "0.1.1",
+	"description": "Typescript plugin used together with unplugin-svelte2react.",
+	"private": false,
+	"keywords": [
+		"typescript",
+		"ts",
+		"typescript-plugin",
+		"ts-plugin",
+		"svelte",
+		"svelte5",
+		"react",
+		"cross-framework",
+		"svelte-to-react",
+		"svelte2react"
+	],
+	"license": "0BSD",
+	"author": "Togan Can Baykar",
+	"type": "commonjs",
+	"scripts": {
+		"build": "tsc",
+		"watch": "tsc --watch",
+		"prepare": "generate-license-file --input package.json --output THIRD-PARTY-LICENSES.txt --overwrite"
+	},
+	"files": [
+		"dist/**/*",
+		"*LICENSE*",
+		"*NOTICE*",
+		"CHANGELOG.md"
+	],
+	"types": "./dist/index.d.ts",
+	"main": "./dist/index.js",
+	"engines": {
+		"node": ">=24"
+	},
+	"packageManager": "pnpm@11.3.0",
+	"devDependencies": {
+		"typescript": "^6.0.3",
+		"utils": "workspace:~"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/canbaykar/svelte2react.git"
+	},
+	"homepage": "https://github.com/canbaykar/svelte2react/tree/main/packages/ts-plugin-svelte2react#readme",
+	"bugs": {
+		"url": "https://github.com/canbaykar/svelte2react/issues"
+	}
 }
