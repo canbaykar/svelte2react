@@ -43,7 +43,7 @@
 		"type": "git",
 		"url": "git+https://github.com/canbaykar/svelte2react.git"
 	},
-	"homepage": "https://github.com/canbaykar/svelte2react/tree/main/packages/ts-plugin-svelte2react#readme",
+	"homepage": "https://github.com/canbaykar/svelte2react#readme",
 	"bugs": {
 		"url": "https://github.com/canbaykar/svelte2react/issues"
 	}
