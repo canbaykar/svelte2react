@@ -1,0 +1,7 @@
+{
+	"language-tools": {
+		"localFolder": "packages/language-tools",
+		"repository": "https://github.com/canbaykar/language-tools-fork-for-svelte2react.git",
+		"branch": "master"
+	}
+}
