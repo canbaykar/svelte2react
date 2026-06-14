@@ -234,6 +234,9 @@ importers:
       generate-license-file:
         specifier: ^4.2.1
         version: 4.2.1(typescript@6.0.3)
+      git-subtree:
+        specifier: ^0.2.1
+        version: 0.2.1
       globals:
         specifier: ^17.6.0
         version: 17.6.0
@@ -2110,6 +2113,9 @@ packages:
     resolution: {integrity: sha512-trmleAnZ2PxN/loHWVhhx1qeOHSRXq4TDsBBxq3GqeJitfk3+jTQ+v/C1km/KYq9M7wKqCewMh+/NAvVH7m+bw==}
     engines: {node: '>=20.19.0'}
 
+  async@1.5.2:
+    resolution: {integrity: sha512-nSVgobk4rv61R9PUSDtYt7mPVB2olxNR5RWJcAsH676/ef11bUZwvu7+RGYrYauVdDPcO519v68wRhXQtxsV9w==}
+
   axobject-query@4.1.0:
     resolution: {integrity: sha512-qIj0G9wZbMGNLjLmg1PT6v2mE9AH2zlnADJD/2tC6E00hgmhUOfEB6greHPAfLRSufHqROIUTkw6E+M3lH0PTQ==}
     engines: {node: '>= 0.4'}
@@ -2255,6 +2261,10 @@ packages:
 
   color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
+
+  colors@1.4.0:
+    resolution: {integrity: sha512-a+UqTh4kgZg/SlGvfbzDHpgRu7AAQOmmqRHJnxhRZICKFUT91brVhNNt58CMWU9PsBbv3PDCZUHbVxuDiH2mtA==}
+    engines: {node: '>=0.1.90'}
 
   commander@14.0.3:
     resolution: {integrity: sha512-H+y0Jo/T1RZ9qPP4Eh1pkcQcLRglraJaSLoyOtHxu6AapkjWVCy2Sit1QQ4x3Dng8qDlSsZEet7g5Pq06MvTgw==}
@@ -2843,6 +2853,10 @@ packages:
     resolution: {integrity: sha512-/6gFNr0N04nob252sTQxyFLi3eKFRqIg1I87YcqAMT1i6SQrSF6KujUEQrtrjMV0H/eejTCltLdDSTEMzHbnsQ==}
     engines: {node: '>=20.20.0'}
 
+  git-subtree@0.2.1:
+    resolution: {integrity: sha512-gw+6WXdsz5YXLJKdBwMGt1b3MUItgYgnqRoCUIdXiCFsz9flUnNPiG/paSwgWoULR7SyrzUANpwlxqz24znvjQ==}
+    hasBin: true
+
   github-slugger@2.0.0:
     resolution: {integrity: sha512-IaOQ9puYtjrkq7Y0Ygl9KDZnrf/aiUJYUpVf89y8kyaxbRG7Y1SrX/jaumrv81vc61+kiMempujsM3Yw7w5qcw==}
 
@@ -3224,6 +3238,9 @@ packages:
 
   lodash.startcase@4.4.0:
     resolution: {integrity: sha512-+WKqsK294HMSc2jEbNgpHpd0JfIBhp7rEV4aqXWqFr6AlXov+SlcgB1Fv01y2kGe3Gc8nMW7VA0SrGuSkRfIEg==}
+
+  lodash@3.10.1:
+    resolution: {integrity: sha512-9mDDwqVIma6OZX79ZlDACZl8sBm0TEnkf99zV3iMA4GzkIT/9hiqP5mY0HoT1iNLCrKc/R1HByV+yJfRWVJryQ==}
 
   log-symbols@4.1.0:
     resolution: {integrity: sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==}
@@ -6432,6 +6449,8 @@ snapshots:
       estree-walker: 3.0.3
       pathe: 2.0.3
 
+  async@1.5.2: {}
+
   axobject-query@4.1.0: {}
 
   balanced-match@4.0.4: {}
@@ -6571,6 +6590,8 @@ snapshots:
       color-name: 1.1.4
 
   color-name@1.1.4: {}
+
+  colors@1.4.0: {}
 
   commander@14.0.3: {}
 
@@ -7196,6 +7217,12 @@ snapshots:
     dependencies:
       resolve-pkg-maps: 1.0.0
 
+  git-subtree@0.2.1:
+    dependencies:
+      async: 1.5.2
+      colors: 1.4.0
+      lodash: 3.10.1
+
   github-slugger@2.0.0: {}
 
   glob-parent@5.1.2:
@@ -7489,6 +7516,8 @@ snapshots:
   lodash.merge@4.6.2: {}
 
   lodash.startcase@4.4.0: {}
+
+  lodash@3.10.1: {}
 
   log-symbols@4.1.0:
     dependencies:
